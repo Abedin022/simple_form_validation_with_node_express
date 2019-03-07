@@ -1,0 +1,18 @@
+html
+html
+   head
+      title Form Tester
+      link(rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+   body
+      form(action = "/signup", method = "POST")
+         #form-group
+            label Name:
+            input.form-control(name='name', type='text')
+         #form-group
+            label Email:
+            input.form-control(name='email', type='text')
+         #form-group
+            label Pass:
+            input.form-control(name='password',type='password')
+         br
+         input.btn.btn-primary(type='submit',value='Submit')
