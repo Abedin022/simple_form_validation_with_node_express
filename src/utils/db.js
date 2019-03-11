@@ -13,16 +13,11 @@ const User = db.define('users', {
   password: Sequelize.TEXT
 })
 
-const Direction = db.define('directions', {
-  destination: Sequelize.TEXT,
-  hash: Sequelize.TEXT
-})
-
 db.sync()
   .then(e => {
     console.log(`Database Synced`)
   }).catch(e => console.log(e.message))
 
 module.exports = {
-  db, User, Direction
+  db, User
 }
