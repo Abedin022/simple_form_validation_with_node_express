@@ -13,7 +13,6 @@ router.get('/login', function (req, res) {
 })
 
 router.post('/login', loginValidator, rejectInvalid, async (req, res, next) => {
-  
   let { password, email } = req.body
   console.log(email, password)
   let [uer, user] = await _p(User.findOne({
